@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  labels:
+    cluster: prod-loc0001
+    owner: platform-team
+  name: app-a

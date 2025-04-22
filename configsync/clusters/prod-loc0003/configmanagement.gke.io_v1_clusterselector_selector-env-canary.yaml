@@ -1,0 +1,11 @@
+apiVersion: configmanagement.gke.io/v1
+kind: ClusterSelector
+metadata:
+  labels:
+    cluster: prod-loc0003
+    owner: platform-team
+  name: selector-env-canary
+spec:
+  selector:
+    matchLabels:
+      environment: canary

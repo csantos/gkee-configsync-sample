@@ -1,0 +1,8 @@
+apiVersion: clusterregistry.k8s.io/v1alpha1
+kind: Cluster
+metadata:
+  labels:
+    cluster: prod-loc0001
+    env: canary
+    location: central
+  name: prod-loc0001
