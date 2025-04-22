@@ -12,3 +12,4 @@ spec:
     branch: main
     dir: configsync/clusters/prod-loc0002
     auth: none
+    period: 60s
