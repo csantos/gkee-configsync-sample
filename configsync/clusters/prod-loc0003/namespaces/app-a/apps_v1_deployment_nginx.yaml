@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: nginx
+    cluster: prod-loc0003
+    env: canary
+  name: nginx
+  namespace: app-a
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      cluster: prod-loc0003
+      env: canary
+  template:
+    metadata:
+      labels:
+        cluster: prod-loc0003
+        env: canary
+    spec:
+      containers:
+      - image: nginx:latest
+        name: nginx
+        ports:
+        - containerPort: 80
+        resources:
+          limits:
+            cpu: 1500m
+            memory: 2000Mi
+          requests:
+            cpu: 750m
+            memory: 400Mi

@@ -17,6 +17,7 @@ kind: Kustomization
 resources:
 - ../../../../all-clusters/all-namespaces/
 - ../../../../all-clusters/namespaces/app-a/
+- nginx.yaml
 patchesStrategicMerge:
 - resource-quota.yaml
 commonLabels:
